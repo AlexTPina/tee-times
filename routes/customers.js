@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const knex = require('../db/knex');
+const customersController = require('../controllers/customers');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  knex.raw('SELECT * from todos').then(function(todos) {
-    res.send(todos.rows);
-  });
-});
+/* GET All Customers */
+router.get('/', customersController.getAllCustomers)
+router.get('/:id', customersController.getOneCustomer)
+router.post('/', customersController.addOneCustomer)
+router.patch('/:id', customersController.updateOneCustomer)
+router.delete('/:id', customersController.removeOneCustomer)
 
 module.exports = router;
