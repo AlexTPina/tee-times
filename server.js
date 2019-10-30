@@ -17,7 +17,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/customers', customers);
-app.use('/appointments', appointments);
+app.use('/teetimes', teetimes);
 
 app.listen(port, function() {
   console.log("listening on port: ", port);

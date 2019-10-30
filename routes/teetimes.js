@@ -5,8 +5,8 @@ const teetimesController = require('../controllers/teetimes');
 /* GET All TeeTimes */
 router.get('/', teetimesController.getAllTeetimes)
 router.get('/:id', teetimesController.getOneTeetime)
-router.post('/', teetimesController.addOneAppointment)
-router.patch('/:id', teetimesController.updateOneAppointment)
-router.delete('/:id', teetimesController.removeOneAppointment)
+router.post('/', teetimesController.addOneTeetime)
+router.patch('/:id', teetimesController.updateOneTeetime)
+router.delete('/:id', teetimesController.removeOneTeetime)
 
 module.exports = router;
