@@ -12,6 +12,6 @@ exports.up = function (knex, Promise) {
   
 };
 
-exports.down = function(knex) {
-    return knex.schema.creatTable('customers')
+exports.down = function(knex, Promise) {
+    return knex.schema.dropTable('customers')
 };
