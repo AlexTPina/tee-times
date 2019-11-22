@@ -21,7 +21,7 @@ exports.addOneCustomer = function (req, res) {
 }
 
 exports.updateOneCustomer = function (req, res) {
-    knex('custoemrs')
+    knex('customers')
         .update({
             ...req.body,
             updated_at: new Date()
